@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using VeriSource.FormGrab.WFD;
+using VeriSource.FormGrab.WFD.Scheduler;
 
 namespace WFD
 {
@@ -13,7 +15,8 @@ namespace WFD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WFDForm());
+            IScheduler scheduler = new Scheduler();
+            Application.Run(new WFDForm(scheduler));
         }
     }
 }

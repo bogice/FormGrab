@@ -1,4 +1,4 @@
-﻿namespace WFD
+﻿namespace VeriSource.FormGrab.WFD
 {
     partial class WFDForm
     {
@@ -124,7 +124,7 @@
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.lblPath);
             this.Name = "WFDForm";
-            this.Text = "Web Form Dowloader";
+            this.Text = "Web Form Downloader";
             this.ResumeLayout(false);
             this.PerformLayout();
 

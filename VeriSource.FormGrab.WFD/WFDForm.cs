@@ -3,19 +3,21 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Diagnostics;
 using System.IO;
-using System.Security;
 using System.Windows.Forms;
+using VeriSource.FormGrab.WFD.Scheduler;
 
-namespace WFD
+namespace VeriSource.FormGrab.WFD
 {
     public partial class WFDForm : Form
     {
         private int count = 0, totalFiles, cycle = 0;
         private string _sourceDir, _destinationDir, _fileFormat;
+        private IScheduler _scheduler;
 
-        public WFDForm()
+        public WFDForm(IScheduler scheduler)
         {
             InitializeComponent();
+            _scheduler = scheduler;
             _sourceDir = ConfigurationManager.AppSettings["SourceDirectory"];
             _destinationDir = ConfigurationManager.AppSettings["DestinationDirectory"];
             _fileFormat = ConfigurationManager.AppSettings["FileFormat"];
@@ -127,7 +129,6 @@ namespace WFD
                 lblCycle.Text = "Cycle # " + cycle;
                 pgbProgess.Maximum = totalFiles;
                 pgbProgess.Value = 0;
-
             }
             else
             {
@@ -161,5 +162,4 @@ namespace WFD
             }
         }
     }
-
 }
