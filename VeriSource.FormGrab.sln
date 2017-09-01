@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{1CA7ED6C-DD90-48F4-BF24-00C4D1F42073}"
+	ProjectSection(SolutionItems) = preProject
+		..\WebFormDownloader.docx = ..\WebFormDownloader.docx
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeriSource.FormGrab.WFDUnitTesting", "VeriSource.FormGrab.WFDUnitTesting\VeriSource.FormGrab.WFDUnitTesting.csproj", "{CD225C31-A03D-49DB-BC79-8DB91F61DC64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeriSource.FormGrab.WFD", "VeriSource.FormGrab.WFD\VeriSource.FormGrab.WFD.csproj", "{62E737C5-EDF1-4B17-A70D-97350D24855A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD225C31-A03D-49DB-BC79-8DB91F61DC64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD225C31-A03D-49DB-BC79-8DB91F61DC64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD225C31-A03D-49DB-BC79-8DB91F61DC64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD225C31-A03D-49DB-BC79-8DB91F61DC64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E737C5-EDF1-4B17-A70D-97350D24855A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E737C5-EDF1-4B17-A70D-97350D24855A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E737C5-EDF1-4B17-A70D-97350D24855A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E737C5-EDF1-4B17-A70D-97350D24855A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

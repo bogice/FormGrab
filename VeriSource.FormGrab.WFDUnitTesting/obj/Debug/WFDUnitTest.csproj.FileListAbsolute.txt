@@ -1,0 +1,25 @@
+\\verisource.local\shares\mydocuments\anguyen\my documents\visual studio 2015\Projects\WebFormDownloader\WFDUnitTest\bin\Debug\WFDUnitTest.dll
+\\verisource.local\shares\mydocuments\anguyen\my documents\visual studio 2015\Projects\WebFormDownloader\WFDUnitTest\bin\Debug\WFDUnitTest.pdb
+\\verisource.local\shares\mydocuments\anguyen\my documents\visual studio 2015\Projects\WebFormDownloader\WFDUnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+\\verisource.local\shares\mydocuments\anguyen\my documents\visual studio 2015\Projects\WebFormDownloader\WFDUnitTest\obj\Debug\WFDUnitTest.csprojResolveAssemblyReference.cache
+\\verisource.local\shares\mydocuments\anguyen\my documents\visual studio 2015\Projects\WebFormDownloader\WFDUnitTest\obj\Debug\WFDUnitTest.dll
+\\verisource.local\shares\mydocuments\anguyen\my documents\visual studio 2015\Projects\WebFormDownloader\WFDUnitTest\obj\Debug\WFDUnitTest.pdb
+\\verisource.local\shares\mydocuments\anguyen\my documents\visual studio 2015\Projects\WebFormDownloader\WFDUnitTest\bin\Debug\WebFormDownloader.exe
+\\verisource.local\shares\mydocuments\anguyen\my documents\visual studio 2015\Projects\WebFormDownloader\WFDUnitTest\bin\Debug\WebFormDownloader.pdb
+\\verisource.local\shares\mydocuments\anguyen\my documents\visual studio 2015\Projects\WebFormDownloader\WFDUnitTest\bin\Debug\Castle.Core.dll
+\\verisource.local\shares\mydocuments\anguyen\my documents\visual studio 2015\Projects\WebFormDownloader\WFDUnitTest\bin\Debug\Moq.dll
+\\verisource.local\shares\mydocuments\anguyen\my documents\visual studio 2015\Projects\WebFormDownloader\WFDUnitTest\bin\Debug\Moq.pdb
+\\verisource.local\shares\mydocuments\anguyen\my documents\visual studio 2015\Projects\WebFormDownloader\WFDUnitTest\bin\Debug\Moq.xml
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\obj\Debug\WFDUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\obj\Debug\WFDUnitTest.dll
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\obj\Debug\WFDUnitTest.pdb
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\bin\Debug\WFDUnitTest.dll
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\bin\Debug\WFDUnitTest.pdb
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\bin\Debug\Castle.Core.dll
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\bin\Debug\Moq.dll
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\bin\Debug\WebFormDownloader.exe
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\bin\Debug\WebFormDownloader.pdb
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\bin\Debug\Moq.pdb
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\bin\Debug\Moq.xml
+C:\Users\ANH\Desktop\WebFormDownloader\WFDUnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml

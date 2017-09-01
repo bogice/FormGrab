@@ -1,0 +1,12 @@
+C:\Users\anguyen\Desktop\WebFormDownloader\VeriSource.FormGrab.WFDUnitTesting\bin\Release\WFDUnitTest.dll
+C:\Users\anguyen\Desktop\WebFormDownloader\VeriSource.FormGrab.WFDUnitTesting\bin\Release\WFDUnitTest.pdb
+C:\Users\anguyen\Desktop\WebFormDownloader\VeriSource.FormGrab.WFDUnitTesting\bin\Release\Castle.Core.dll
+C:\Users\anguyen\Desktop\WebFormDownloader\VeriSource.FormGrab.WFDUnitTesting\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\anguyen\Desktop\WebFormDownloader\VeriSource.FormGrab.WFDUnitTesting\bin\Release\Moq.dll
+C:\Users\anguyen\Desktop\WebFormDownloader\VeriSource.FormGrab.WFDUnitTesting\bin\Release\WebFormDownloader.exe
+C:\Users\anguyen\Desktop\WebFormDownloader\VeriSource.FormGrab.WFDUnitTesting\bin\Release\WebFormDownloader.pdb
+C:\Users\anguyen\Desktop\WebFormDownloader\VeriSource.FormGrab.WFDUnitTesting\bin\Release\Moq.pdb
+C:\Users\anguyen\Desktop\WebFormDownloader\VeriSource.FormGrab.WFDUnitTesting\bin\Release\Moq.xml
+C:\Users\anguyen\Desktop\WebFormDownloader\VeriSource.FormGrab.WFDUnitTesting\obj\Release\VeriSource.FormGrab.WFDUnitTesting.csprojResolveAssemblyReference.cache
+C:\Users\anguyen\Desktop\WebFormDownloader\VeriSource.FormGrab.WFDUnitTesting\obj\Release\WFDUnitTest.dll
+C:\Users\anguyen\Desktop\WebFormDownloader\VeriSource.FormGrab.WFDUnitTesting\obj\Release\WFDUnitTest.pdb
