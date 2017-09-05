@@ -10,8 +10,8 @@ namespace VeriSource.FormGrab.WFD
 {
     public partial class WFDForm : Form
     {
-        private int count = 0, totalFiles, cycle = 0;
-        private string _sourceDir, _destinationDir, _fileFormat;
+        private int _count = 0, _totalFiles, cycle = 0;
+        private string _sourceDir, _destinationDir, _frequency, _fileFormat;
         private IScheduler _scheduler;
 
         public WFDForm(IScheduler scheduler)
@@ -20,6 +20,7 @@ namespace VeriSource.FormGrab.WFD
             _scheduler = scheduler;
             _sourceDir = ConfigurationManager.AppSettings["SourceDirectory"];
             _destinationDir = ConfigurationManager.AppSettings["DestinationDirectory"];
+            _frequency = ConfigurationManager.AppSettings["Frequency"];
             _fileFormat = ConfigurationManager.AppSettings["FileFormat"];
         }
 
@@ -35,6 +36,9 @@ namespace VeriSource.FormGrab.WFD
             {
                 btnStart.Text = "Stop";
                 lblStart.Text = "Program started at: " + DateTime.Now.ToString(@"MM/dd/yyyy HH:mm:ss");
+
+                tmrRetrieval.Interval = Int32.Parse(_frequency);
+
                 tmrRetrieval.Start();
 
                 if (!bgwProcess.IsBusy && !PrepareCopy())
@@ -62,10 +66,10 @@ namespace VeriSource.FormGrab.WFD
 
             foreach (FileInfo file in files)
             {
-                count++;
+                _count++;
                 string temppath = Path.Combine(destDir, file.Name);
                 file.CopyTo(temppath, true);
-                worker.ReportProgress((int)((count / totalFiles) * 100), new object[] { Path.Combine(sourceDir, file.Name), count });
+                worker.ReportProgress((int)((_count / _totalFiles) * 100), new object[] { Path.Combine(sourceDir, file.Name), _count });
             }
 
             // If copying subdirectories, copy them and their contents to new location.
@@ -104,12 +108,17 @@ namespace VeriSource.FormGrab.WFD
             else
             {
                 Kill(_sourceDir);
-                lblProgress.Text = "Total " + count + " file(s) downloaded!";
+                lblProgress.Text = "Total " + _count + " file(s) downloaded!";
                 lblProgress.ForeColor = System.Drawing.Color.Green;
-                Process.Start("notepad.exe");
+
+                Process[] pname = Process.GetProcessesByName("notepad");
+                if (pname.Length == 0)
+                {
+                    Process.Start("notepad.exe");
+                }
             }
             txtPath.Text = "";
-            count = 0;
+            _count = 0;
         }
 
         public bool PrepareCopy()
@@ -117,8 +126,8 @@ namespace VeriSource.FormGrab.WFD
             var ready = false;
             if (DateTime.Now.TimeOfDay > new TimeSpan(3, 00, 0) && DateTime.Now.TimeOfDay < new TimeSpan(23, 30, 0))
             {
-                totalFiles = Directory.GetFiles(_sourceDir, _fileFormat, SearchOption.AllDirectories).Length;
-                if (totalFiles == 0)
+                _totalFiles = Directory.GetFiles(_sourceDir, _fileFormat, SearchOption.AllDirectories).Length;
+                if (_totalFiles == 0)
                 {
                     lblProgress.ForeColor = System.Drawing.Color.Blue;
                     lblProgress.Text = "Nothing to copy.";
@@ -127,7 +136,7 @@ namespace VeriSource.FormGrab.WFD
                 }
                 cycle = (cycle > 32000) ? 1 : (cycle + 1);
                 lblCycle.Text = "Cycle # " + cycle;
-                pgbProgess.Maximum = totalFiles;
+                pgbProgess.Maximum = _totalFiles;
                 pgbProgess.Value = 0;
             }
             else
