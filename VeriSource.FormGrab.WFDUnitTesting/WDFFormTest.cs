@@ -5,7 +5,7 @@ namespace WFDUnitTest
     [TestFixture]
     public class WDFFormTest
     {
-        [TestCase("ha", "ha")]
+        [TestCase("input", "input")]
         public void Is_Retrieval_Files_From_WebServer_Folder_Every30Sec(string input, string expected)
         {
 

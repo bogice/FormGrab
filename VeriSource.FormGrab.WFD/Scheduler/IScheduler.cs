@@ -8,6 +8,14 @@ namespace VeriSource.FormGrab.WFD.Scheduler
 {
     public interface IScheduler
     {
+        event EventHandler<EventArgs> Run;
+
+        int Interval { set; }
+
+        void Start();
+
+        void Stop();
+
         bool Prepare();
 
         void DirectoryCopy();

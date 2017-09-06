@@ -11,17 +11,24 @@ namespace VeriSource.FormGrab.WFD
     public partial class WFDForm : Form
     {
         private int _count = 0, _totalFiles, cycle = 0;
-        private string _sourceDir, _destinationDir, _frequency, _fileFormat;
+        private string _sourceDir, _destinationDir, _frequency, _fileFormat, _postProcess, _processPath, _machineName;
         private IScheduler _scheduler;
 
         public WFDForm(IScheduler scheduler)
         {
             InitializeComponent();
             _scheduler = scheduler;
+            _scheduler.Run += tmrRetrieval_Tick;
             _sourceDir = ConfigurationManager.AppSettings["SourceDirectory"];
             _destinationDir = ConfigurationManager.AppSettings["DestinationDirectory"];
             _frequency = ConfigurationManager.AppSettings["Frequency"];
+            _postProcess = ConfigurationManager.AppSettings["PostProcess"];
+            _processPath = ConfigurationManager.AppSettings["ProcessPath"];
+            _machineName = ConfigurationManager.AppSettings["MachineName"];
             _fileFormat = ConfigurationManager.AppSettings["FileFormat"];
+            tmrRetrieval.Interval = Int32.Parse(_frequency);
+            Run();
+
         }
 
         public void Button_Click(object sender, EventArgs e)
@@ -34,17 +41,20 @@ namespace VeriSource.FormGrab.WFD
             }
             else
             {
-                btnStart.Text = "Stop";
-                lblStart.Text = "Program started at: " + DateTime.Now.ToString(@"MM/dd/yyyy HH:mm:ss");
+                Run();
+            }
+        }
 
-                tmrRetrieval.Interval = Int32.Parse(_frequency);
+        private void Run()
+        {
+            btnStart.Text = "Stop";
+            lblStart.Text = "Program started at: " + DateTime.Now.ToString(@"MM/dd/yyyy HH:mm:ss");
 
-                tmrRetrieval.Start();
+            tmrRetrieval.Start();
 
-                if (!bgwProcess.IsBusy && !PrepareCopy())
-                {
-                    bgwProcess.RunWorkerAsync();
-                }
+            if (!bgwProcess.IsBusy && !PrepareCopy())
+            {
+                bgwProcess.RunWorkerAsync();
             }
         }
 
@@ -111,10 +121,13 @@ namespace VeriSource.FormGrab.WFD
                 lblProgress.Text = "Total " + _count + " file(s) downloaded!";
                 lblProgress.ForeColor = System.Drawing.Color.Green;
 
-                Process[] pname = Process.GetProcessesByName("notepad");
+                Process[] pname = Process.GetProcessesByName(_postProcess, _machineName);
                 if (pname.Length == 0)
                 {
-                    Process.Start("notepad.exe");
+                    Process p = new Process();
+                    p.StartInfo.FileName = _processPath;
+                    p.StartInfo.UseShellExecute = false;
+                    p.Start();
                 }
             }
             txtPath.Text = "";
